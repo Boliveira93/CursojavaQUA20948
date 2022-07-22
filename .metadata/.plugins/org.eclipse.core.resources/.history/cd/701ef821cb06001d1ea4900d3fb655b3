@@ -1,0 +1,18 @@
+package aulas;
+
+public class HelloWorld {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int idade = 29; 
+		String nome = "Bruno";
+		boolean dinheiro = 600;
+		
+		System.out.println("Nome " + nome + "tem " + idade + " e tem " + dinheiro);
+		
+	
+		System.out.println(nome);
+	
+	}
+
+}
