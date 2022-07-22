@@ -23,7 +23,7 @@ public class EstruturaCondicional {
 		}
 		
 		
-		//um programa que leia 3 números e mostre o maior deles
+		
 		int num1 = 0;
 		int num2 = 0;
 		int num3 = 0;
@@ -34,7 +34,7 @@ public class EstruturaCondicional {
 		System.out.println("Entre com o num2 ");
 		num2 = leia.nextInt();
 		
-		System.out.println("Entre com num3 ");
+		System.out.println("Entra com num3 ");
 		num3 = leia.nextInt();
 		
 		if(num1 > num2) {
