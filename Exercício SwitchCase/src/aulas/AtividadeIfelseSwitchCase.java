@@ -89,6 +89,23 @@ public class AtividadeIfelseSwitchCase {
 		} else {
 			System.out.println("LOGIN E SENHAS INCORRETO");
 		}
+		
+		double salarioBruto = 0.0;
+		double salarioLiquido = 0.0;
+		double inss = 0.11;
+		double irpf = 0.05;
+		
+		System.out.println("Entre com salario Bruto: ");
+		salarioBruto = leia.nextDouble();
+		
+		salarioLiquido = salarioBruto - ((salarioBruto * inss) + (salarioBruto * irpf));
+		if(salarioLiquido < 1200.00) {
+			salarioLiquido += salarioLiquido * 0.05;
+		}else if(salarioLiquido > 3500.00) {
+			salarioLiquido += salarioLiquido * 0.02;
+		}
+		
+		System.out.println("Salario Atualizado: " + salarioLiquido);
 
 		leia.close();
 		in.close();

@@ -16,7 +16,7 @@ public class ExercicioCondicional {
 		System.out.println("Entre com segundo numero: ");
 		n2 = leia.nextInt();
 		
-		if(n1 > n2) {
+		if(n1 >= n2) {
 			System.out.println("Maior numero: " + n1);
 		}else {
 			System.out.println("Maior numero: " + n2);
