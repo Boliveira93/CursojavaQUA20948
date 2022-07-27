@@ -57,6 +57,7 @@ public class ExercicioEleições2022 {
 		System.out.println("QUANTIDADE DE VOTOS Bolso Nelso: "+ bolsoNelson);
 		System.out.println("QUANTIDADE DE VOTOS Cilouca Gomes: "+ ciloucaGomes);
 		System.out.println("QUANTIDADE DE VOTOS Bolos Bolinho: "+ bolosBolinho);
+		System.out.println("QUANTIDADE DE Nulos: "+ votoNulo);
 		
 		
 		
