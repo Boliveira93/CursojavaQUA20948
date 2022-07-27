@@ -33,7 +33,7 @@ public class AtividadeIfelseSwitchCase {
 
 		}
 
-		System.out.println("Saiu do Switch case!");
+		System.out.println("Saiu do Switch case!" + 3);
 
 		/*
 		 * Faça um programa que peça ao usuário para digitar um numero entre 1 e 7 não

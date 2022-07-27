@@ -6,11 +6,13 @@ import java.util.Scanner;
 public class SextoExercicio {
 
 	public static void main(String[] args) {
+		
 		Scanner scan = new Scanner(System.in).useLocale(Locale.US);
+		
 		/*1. Faça um programa que peça uma nota, entre zero e dez. Mostre uma mensagem caso o valor 
 		 seja inválido e continue pedindo até que o usuário informe um valor	válido.*/
 		
-		int nota = 0;
+		/*int nota = 0;
 		
 		System.out.print("Informe sua nota (Entre zero e dez): ");
 		nota = scan.nextInt();
@@ -19,32 +21,32 @@ public class SextoExercicio {
 			System.out.print("\nInforme sua nota (Entre zero e dez): ");
 			nota = scan.nextInt();
 		}
-		System.out.println("A nota inserida foi: " + nota + "\n");
+		System.out.println("A nota inserida foi: " + nota + "\n");*/
 		
 		/*2. Faça um programa que leia um nome de usuário e a sua senha e não aceite a senha igual ao nome do usuário, mostrando uma mensagem de erro e voltando a pedir as informações.*/
 		
 		
-		String login;
-		String senha;
+		String login1;
+		String senha2;
 		
-		System.out.println("Insite o seu Login: ");
-		login = scan.nextLine();
+		System.out.println("Insira o seu Login: ");
+		login1 = scan.nextLine();
 		
-		scan.nextLine();
+		
 		System.out.println("Insira sua senha: ");
-		senha = scan.nextLine();
+		senha2 = scan.nextLine();
 		
-		while(login.equals(senha)) {
+		while(login1.equals(senha2)) {
 			System.out.println("\nO login e senha devem ser diferente!!");
 			System.out.println("\nInsira o login do usuario: ");
-			login = scan.nextLine();
+			login1 = scan.nextLine();
 			scan.nextLine();
 			System.out.println("Insira sua senha: ");
-			senha = scan.nextLine();
+			senha2 = scan.nextLine();
 		}
 		
 		System.out.println("\nDados Cadastrados com Suceso!!");
-		System.out.printf("login: %s | Senha %s", login, senha + "\n");
+		System.out.printf("login: " + login1 + "Senha: " + senha2);
 		
 		/*3. Faça um programa que leia e valide as seguintes informações:
 		A.Nome:
