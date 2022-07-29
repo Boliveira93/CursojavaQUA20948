@@ -31,7 +31,6 @@ public class ExercicioEleições2022 {
 			
 			case 1:
 				System.out.println("SEU VOTO FOI PARA (LULA MOLUSCO)");
-			
 				lulaMolusco++;
 				break;
 			case 2:
@@ -46,10 +45,10 @@ public class ExercicioEleições2022 {
 				System.out.println("SEU VOTO FOI (BOLOS BOLINHO");
 				bolosBolinho++;
 				break;
-				
 			default:
 				System.out.println(" VOCÊ VOTOU NULO ");
 				votoNulo++;
+				
 			}
 		}
 		System.out.println(" ### QUANTIDADE DE VOTOS ### \n");
