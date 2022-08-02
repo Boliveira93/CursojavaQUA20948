@@ -14,11 +14,13 @@ public class DMatriz {
 				System.out.println(numero[i][j] + "\t");
 				contador++;
 			}
-			System.out.println("Numeros na Diagonal");
+			System.out.println();
 		}
 		
 		for(int i = 0; i < numero.length;i++) {
+			
 			for(int j = 0; j < numero.length; j++) {
+				
 				if(numero[i] == numero[j]) {
 					System.out.print(numero[i][j] +"\t");
 				}
