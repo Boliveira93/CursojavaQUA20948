@@ -6,8 +6,24 @@ public class Produto {
 	public int quantidade;
 	public double valor;
 	
+	/*public Produto() {
+		
+	}*/
+	
+	public Produto(String nomeProduto, int quantidade, double valor) {
+		// atributo da classe parametro recebido no construtor
+		this.nomeProduto = nomeProduto;
+		this.quantidade = quantidade;
+		this.valor = valor;
+		
+	}
+	
+	public Produto(String nomeProduto) {
+		this.nomeProduto = nomeProduto;
+	}
+	
 	public void AdicionarItem(int qdt) {
-		quantidade =+ qdt;
+		quantidade += qdt;
 	}
 	
 	public void RemoverItem(int qdt) {
