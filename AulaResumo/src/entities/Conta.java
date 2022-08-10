@@ -1,12 +1,13 @@
 package entities;
 
-public class Conta {
+public class Conta  {
 	
 	
 	private int numeroConta;
 	private int agencia;
 	private double saldo;
-	private String titularDaConta;
+	private Clientes titularDaConta;
+	
 	
 	public Conta() {
 		
@@ -28,11 +29,11 @@ public class Conta {
 		this.agencia = agencia;
 	}
 
-	public String getTitularDaConta() {
+	public Clientes getTitularDaConta() {
 		return titularDaConta;
 	}
 
-	public void setTitularDaConta(String titularDaConta) {
+	public void setTitularDaConta(Clientes titularDaConta) {
 		this.titularDaConta = titularDaConta;
 	}
 
@@ -44,14 +45,27 @@ public class Conta {
 		this.saldo += valor;
 	}
 	
-	public boolean Sacar(double valor) {
-		if(valor > this.saldo) {
+	public boolean Sacar(double valor) throws ContaException {
+		if(valor <= this.saldo) {
+			this.saldo -= valor;
 			return false;
 		}else {
-			this.saldo -= valor;
-			return true;
+			throw new ContaException("Saldo Indisponivel");
+			
+			//return true;
 		}
 		
+	}
+	
+	public boolean Transferir(double valor, Conta destino) throws ContaException {
+		if(valor <= this.saldo) {
+			this.saldo -= valor;
+			destino.saldo += valor;
+			return true;
+		}
+		throw new ContaException("Saldo indisponivel!");
+		//return false;
+	
 	}
 	
 
