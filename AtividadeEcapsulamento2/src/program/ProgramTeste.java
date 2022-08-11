@@ -58,6 +58,8 @@ public class ProgramTeste {
 		System.out.println("informe seu Telefone: ");
 		clientes.setTelefone(sc.nextLine());
 		
+		System.out.println("DADOS RECEBIDO COM SUCESSO!");
+		
 		System.out.println(clientes);
 		System.out.println("PARABÉNS, CADASTRO APROVADO COM SUCESSO!");
 		

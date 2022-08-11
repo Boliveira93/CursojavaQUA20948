@@ -1,23 +1,25 @@
 package entities;
 
-public class ContaCorrente extends Conta {
+public class ContaPoupanca extends Conta {
+
 	
-	public ContaCorrente() {
+	public ContaPoupanca() {
 		
 	}
 	
-	public ContaCorrente(int numeroConta, int agencia, double saldo, Cliente titular) {
+	public ContaPoupanca(int numeroConta, int agencia, double saldo, Cliente titular) {
 		super(numeroConta, agencia, saldo, titular);
 	}
+	
 	@Override
 	public boolean Sacar(double valor) {
 		if(valor <= this.saldo) {
-			this.saldo -= valor;
+			this.saldo -= valor - 1.00;
 			return true;
 		}
 		else {
 			return false;
 		}
 	}
-
+	
 }

@@ -2,9 +2,9 @@ package program;
 
 import java.util.Scanner;
 
-import entities.Cliente;
 import entities.Conta;
 import entities.ContaCorrente;
+import entities.ContaPoupanca;
 
 public class Program {
 
@@ -13,6 +13,8 @@ public class Program {
 		Scanner sc = new Scanner(System.in);
 		
 		//Cliente cliente = new Cliente();
+		
+		ContaPoupanca cp = new ContaPoupanca();
 		
 		Conta contaContacorrente = new ContaCorrente();
 		Conta conta = new Conta();
@@ -23,9 +25,11 @@ public class Program {
 		conta.Sacar(50);
 		contaContacorrente.Sacar(50);
 		
+		conta.Sacar(67);
+		
 		System.out.println("Saldo conta: " + conta.getSaldo());
 		System.out.println("saldo conta corrente: " + contaContacorrente.getSaldo());
-		
+		System.out.println("Saldo Conta Poupança: " + cp.getSaldo());
 		
 		
 		
