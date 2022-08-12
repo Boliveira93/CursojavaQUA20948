@@ -14,7 +14,7 @@ public class ContaPoupanca extends Conta {
 	@Override
 	public boolean Sacar(double valor) {
 		if(valor <= this.saldo) {
-			this.saldo -= valor - 1.00;
+			this.saldo -= valor + 1.00;
 			return true;
 		}
 		else {
