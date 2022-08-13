@@ -91,6 +91,18 @@ public class Veiculo {
 		this.tipoCombustivel = tipoCombustivel;
 	}
 	
+	@Override
+	public String toString() {
+		
+		return "\nQTD de Pneus em uma Moto: " +  qtdPneusMoto + 
+				"\nQTD Pneus Carro: " + qtdPneusCarro + 
+				"\nQTD de cavalos: " + qtdCavalos + 
+				"\nQTD de Cilindradas: " + qtdCilindrada +
+				"\nQTD Passageiros na Moto: " + qtdPassageiroMoto +
+				"\nQTD Passageiros no Carro: " + qtdPassageiroCarro + 
+				"\nTipo de Combustivel: " + tipoCombustivel;
+	}
+	
 	
 
 }
