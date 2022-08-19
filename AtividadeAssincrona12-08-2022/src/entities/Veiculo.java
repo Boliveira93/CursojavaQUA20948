@@ -2,85 +2,57 @@ package entities;
 
 public class Veiculo {
 	
-	private String qtdPneusMoto;
-	private String qtdPneusCarro;
-	private double qtdCavalos;
-	private String qtdCilindrada;
-	private String qtdPassageiroMoto;
-	private String qtdPassageiroCarro;
+	private int qtdPneus;
+	private String motor;
+	private int qtdPassageiros;
 	private String tipoCombustivel;
+	private String tipo;
+	private String modelo;
 	
 	public Veiculo() {
 		
 	}
 	
-	public Veiculo(String qtdPneusMoto) {
-		this.qtdPassageiroMoto = qtdPassageiroMoto;
-		this.qtdPneusCarro = qtdPneusCarro;
-		this.qtdCavalos = qtdCavalos;
-		this.qtdCilindrada = qtdCilindrada;
-		this.qtdPassageiroMoto = qtdPassageiroMoto;
-	}
-	public Veiculo(String qtdPneusMoto,String qtdPneusCarro,double  qtdCavalos,String qtdCilindrada,String qtdPassageiroMoto,String qtdPassageiroCarro,String tipoCombustivel) {
-		this();
-		this.qtdPassageiroMoto = qtdPassageiroMoto;
-		this.qtdPneusCarro = qtdPneusCarro;
-		this.qtdCavalos = qtdCavalos;
-		this.qtdCilindrada = qtdCilindrada;
-		this.qtdPassageiroMoto = qtdPassageiroMoto;
-		this.qtdPassageiroCarro = qtdPassageiroCarro;
-		this.tipoCombustivel = tipoCombustivel;
-		
-	}
-
-	public String getQtdPneusMoto() {
-		return qtdPneusMoto;
-	}
-
-	public void setQtdPneusMoto(String qtdPneusMoto) {
-		this.qtdPneusMoto = qtdPneusMoto;
-	}
-
-	public String getQtdPneusCarro() {
-		return qtdPneusCarro;
-	}
-
-	public void setQtdPneusCarro(String qtdPneusCarro) {
-		this.qtdPneusCarro = qtdPneusCarro;
-	}
-
 	
-
-	public double getQtdCavalos() {
-		return qtdCavalos;
+	
+	
+	
+	public Veiculo(int qtdPneus, String motor, int qtdPassageiros, String tipoCombustivel, String tipo, String modelo) {
+		super();
+		this.qtdPneus = qtdPneus;
+		this.motor = motor;
+		this.qtdPassageiros = qtdPassageiros;
+		this.tipoCombustivel = tipoCombustivel;
+		this.tipo = tipo;
+		this.modelo = modelo;
 	}
 
-	public void setQtdCavalos(double qtdCavalos) {
-		this.qtdCavalos = qtdCavalos;
+
+
+
+
+	public int getQtdPneus() {
+		return qtdPneus;
 	}
 
-	public String getQtdCilindrada() {
-		return qtdCilindrada;
+	public void setQtdPneus(int qtdPneus) {
+		this.qtdPneus = qtdPneus;
 	}
 
-	public void setQtdCilindrada(String qtdCilindrada) {
-		this.qtdCilindrada = qtdCilindrada;
+	public String getMotor() {
+		return motor;
 	}
 
-	public String getQtdPassageiroMoto() {
-		return qtdPassageiroMoto;
+	public void setMotor(String motor) {
+		this.motor = motor;
 	}
 
-	public void setQtdPassageiroMoto(String qtdPassageiroMoto) {
-		this.qtdPassageiroMoto = qtdPassageiroMoto;
+	public int getQtdPassageiros() {
+		return qtdPassageiros;
 	}
 
-	public String getQtdPassageiroCarro() {
-		return qtdPassageiroCarro;
-	}
-
-	public void setQtdPassageiroCarro(String qtdPassageiroCarro) {
-		this.qtdPassageiroCarro = qtdPassageiroCarro;
+	public void setQtdPassageiros(int qtdPassageiros) {
+		this.qtdPassageiros = qtdPassageiros;
 	}
 
 	public String getTipoCombustivel() {
@@ -91,17 +63,35 @@ public class Veiculo {
 		this.tipoCombustivel = tipoCombustivel;
 	}
 	
+	
+
+	public String getTipo() {
+		return tipo;
+	}
+
+	public void setTipo(String tipo) {
+		this.tipo = tipo;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public void setModelo(String modelo) {
+		this.modelo = modelo;
+	}
+
 	@Override
 	public String toString() {
-		
-		return "\nQTD de Pneus em uma Moto: " +  qtdPneusMoto + 
-				"\nQTD Pneus Carro: " + qtdPneusCarro + 
-				"\nQTD de cavalos: " + qtdCavalos + 
-				"\nQTD de Cilindradas: " + qtdCilindrada +
-				"\nQTD Passageiros na Moto: " + qtdPassageiroMoto +
-				"\nQTD Passageiros no Carro: " + qtdPassageiroCarro + 
-				"\nTipo de Combustivel: " + tipoCombustivel;
+		return "qtdPneus=" + qtdPneus 
+				+ "\nmotor=" + motor 
+				+ "\nqtdPassageiros=" + qtdPassageiros
+				+ "\ntipoCombustivel=" + tipoCombustivel 
+				+ "\ntipo=" + tipo 
+				+ "\nmodelo=" + modelo;
 	}
+
+	
 	
 	
 

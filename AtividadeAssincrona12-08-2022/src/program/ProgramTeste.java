@@ -1,6 +1,7 @@
 package program;
 
 import java.util.ArrayList;
+import java.util.Locale;
 import java.util.Scanner;
 
 import entities.Carro;
@@ -11,52 +12,77 @@ public class ProgramTeste {
 
 	public static void main(String[] args) {
 
-		Scanner sc = new Scanner(System.in);
+		Scanner sc = new Scanner(System.in).useLocale(Locale.US);
 
-		Carro c1 = new Carro();
+		Carro carro;
+		Moto moto = new Moto();
 
-		Moto m1 = new Moto();
-		
-		Veiculo v1 = new Veiculo();
+		ArrayList<Veiculo> carros = new ArrayList<>();
+		ArrayList<Veiculo> motos = new ArrayList<>();
 
-		ArrayList<Carro> carros = new ArrayList<>();
+		char opcao;
 
-		char opt;
-		System.out.print("Cadastrar Caracteristicas do Carro/Moto(s/n):  ");
-		opt = sc.next().charAt(0);
+		System.out.println("Você deseja cadastra um veiculo (s/n)");
+		opcao = sc.next().charAt(0);
 
-		while (Character.toLowerCase(opt) == 's') {
-			sc.nextLine();
-			System.out.print("Quantos Pneus tem um Carro: ");
-			c1.setQtdPneusCarro(sc.nextLine());
-			
-			System.out.println("Quantos Pneus tem uma Moto: ");
-			m1.setQtdPneusMoto(sc.nextLine());
-			
-			System.out.println("Quantas Cilindrada tem uma Moto: ");
-			m1.setQtdCilindrada(sc.nextLine());
+		while (Character.toLowerCase(opcao) == 's') {
 
-			System.out.print("Quantos Cavalos: ");
-			c1.setQtdCavalos(sc.nextDouble());
-			
-			System.out.println("Quantos Passageiros em uma Moto: ");
-			m1.setQtdPassageiroMoto(sc.nextLine());
+			System.out.println("Qual tipo de Veiculo quer Cadastrar (c/m)");
+			opcao = sc.next().charAt(0);
 
-			sc.nextLine();
-			System.out.print("Quantos Passageiros do Carro: ");
-			c1.setQtdPassageiroCarro(sc.nextLine());
+			switch (Character.toLowerCase(opcao)) {
+			case 'c':
+				carro = new Carro();
+				sc.nextLine();
+				System.out.println("Entre com o tipo do veiculo: ");
+				carro.setTipo(sc.nextLine());
 
-			System.out.print("Qual o tipo de Combustivel: ");
-			c1.setTipoCombustivel(sc.nextLine());
+				System.out.println("Entre com o tipo do Combustivel: ");
+				carro.setTipoCombustivel(sc.nextLine());
 
-			System.out.print(" \n### CARACTERISTICAS OBTIDAS ###:\n");
-			System.out.println(v1);
+				System.out.println("Entre com a potencia do carro: ");
+				carro.setMotor(sc.nextLine());
 
-			System.out.print("\nCadastrar Caracteristicas do Carro(s/n):  \n");
-			opt = sc.next().charAt(0);
+				System.out.println("Entre com o modelo: ");
+				carro.setModelo(sc.nextLine());
+
+				System.out.println("Entre com a quantidade de passageiros: ");
+				carro.setQtdPassageiros(sc.nextInt());
+
+				System.out.println("Entre com a quantidade de pneus: ");
+				carro.setQtdPneus(sc.nextInt());
+
+				sc.nextLine();
+				System.out.println("Entre com o Modelo do Som (Básico/Multimidia: ");
+				carro.setSonorizacao(sc.nextLine());
+
+				System.out.println("Entre com o Modelo do ar condicionado (manual/digital): ");
+				carro.setArCondicionado(sc.nextLine());
+
+				carros.add(carro);
+
+				break;
+
+			default:
+				System.out.println("Tipo incopativel!");
+				break;
+				
+				while (Character.toLowerCase(opcao) == 's') {
+					
+				}
+				
+				
+				System.out.println("Qual tipo de Veiculo quer Cadastrar (c/m)");
+				opcao = sc.next().charAt(0);
+			case 'm':
+				
+			}
+
 		}
-		System.out.println("Ok. Até a Próxima!");
-		sc.close();
+
+		for (Veiculo listaCarros : carros) {
+			System.out.println(listaCarros);
+		}
 
 	}
 
